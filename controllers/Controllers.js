@@ -77,13 +77,13 @@ exports.checkSpam = async (req, res) => {
                 data = null
         }
         else {
-            data = spam
+            data = spam.report
             message = "Found"
         }
         res.status(200).json({
             status: "Success",
             message: message,
-            data: data
+            report: data
         })
     }
     catch (err) {
