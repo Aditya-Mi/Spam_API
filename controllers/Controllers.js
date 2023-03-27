@@ -40,9 +40,8 @@ exports.addReport = async (req, res) => {
         }
         res.status(200).json({
             status: "Success",
-            data: {
-                response
-            }
+            number: response.number,
+            report: response.report
         }
         )
 
